@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<!-- <link rel="stylesheet" href="register.css"> -->
+<link rel="stylesheet" href="dashboard.css">
+   
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm custom-navbar fixed-top">
+  <div class="container">
+    <div class="d-flex align-items-center">
+
+      <a class="navbar-brand" href="#">
+        <img src="finalgreenlogo.png" class="logo-img" alt="Stackly">
+      </a>
+      <div class="ms-3 d-flex align-items-center location-box">
+        <i class="bi bi-geo-alt-fill text-danger fs-5 me-1"></i>
+        <div class="d-flex flex-column lh-sm">
+          <small class="text-muted">Deliver to</small>
+          <span class="fw-semibold">Chennai</span>
+        </div>
+      </div>
+
+    </div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse align-items-center" id="navbarContent">
+      <ul class="navbar-nav mx-lg-4 gap-lg-4">
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle fw-semibold" href="#" role="button" data-bs-toggle="dropdown">
+            Home
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="index.html">Home 1</a></li>
+            <li><a class="dropdown-item" href="home2.html">Home 2</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle fw-semibold" href="#" data-bs-toggle="dropdown">
+            Categories
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="vegetable.html">Vegetables</a></li>
+            <li><a class="dropdown-item" href="fruit.html">Fruits</a></li>
+            <li><a class="dropdown-item" href="diary.html">Dairy</a></li>
+            <li><a class="dropdown-item" href="snacks.html">Snacks</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item"><a class="nav-link fw-semibold" href="dashboard.html">Dashboard</a></li>
+        <li class="nav-item"><a class="nav-link fw-semibold" href="contact.html">Contact</a></li>
+      </ul>
+
+  <ul class="navbar-nav ms-auto align-items-lg-center">
+  <li class="nav-item dropdown me-3">
+    <a class="nav-link dropdown-toggle fw-semibold d-flex align-items-center"
+       href="#" role="button" data-bs-toggle="dropdown">
+      <i class="bi bi-person-circle fs-5 me-2"></i> Profile
+    </a>
+
+    <ul class="dropdown-menu dropdown-menu-end shadow">
+      <li><a class="dropdown-item" href="login.html">Login</a></li>
+      <li><a class="dropdown-item" href="register.html">Register</a></li>
+      <li><hr class="dropdown-divider"></li>
+      <li><a class="dropdown-item" href="error2.html">My Orders</a></li>
+      <li><a class="dropdown-item" href="trackorder.html">Track Order</a></li>
+    </ul>
+  </li>
+
+        <li class="nav-item">
+          <a class="nav-link fw-semibold d-flex align-items-center gap-1" href="error2.html">
+
+         <div class="cart-icon-wrapper">
+      <i class="bi bi-cart3 fs-5"></i>
+      <span id="cartCount" class="cart-badge">0</span>
+    </div>
+     Cart
+  </a>
+</li>
+      </ul>
+
+    </div>
+  </div>
+</nav>
+<div class="bg-light">
+<div class="container-fluid">
+  <div class="row">
+
+    <div class="col-md-3 col-lg-2 d-none d-md-block bg-white vh-100 p-3 shadow-sm">
+
+         <h5 class="fw-bold text-success mb-4">
+          <i class="bi bi-layout-text-window-reverse"></i> Stackly
+            </h5>
+      <ul class="nav flex-column">
+        <li class="nav-item mb-3">
+          <a class="nav-link active" href="error2.html">
+            <i class="bi bi-grid"></i> Dashboard
+          </a>
+        </li>
+        <li class="nav-item mb-3">
+          <a class="nav-link" href="error2.html">
+            <i class="bi bi-bag"></i> Orders
+          </a>
+        </li>
+        <li class="nav-item mb-3">
+          <a class="nav-link" href="error2.html">
+            <i class="bi bi-box"></i> Inventory
+          </a>
+        </li>
+      </ul>
+
+    </div>
+    <div class="offcanvas offcanvas-start"
+         tabindex="-1"
+         id="mobileSidebar">
+
+      <div class="offcanvas-header">
+        <h5 class="fw-bold text-success">
+          <i class="bi bi-basket2"></i> Stackly
+        </h5>
+        <button type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"></button>
+      </div>
+
+      <div class="offcanvas-body">
+        <ul class="nav flex-column">
+          <li class="nav-item mb-3">
+            <a class="nav-link active" href="dashboard.html">
+              <i class="bi bi-grid"></i> Dashboard
+            </a>
+          </li>
+          <li class="nav-item mb-3">
+            <a class="nav-link" href="error2.html">
+              <i class="bi bi-bag"></i> Orders
+            </a>
+          </li>
+          <li class="nav-item mb-3">
+            <a class="nav-link" href="error2.html">
+              <i class="bi bi-box"></i> Inventory
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <main class="col-md-9 col-lg-10 px-md-4 py-4">
+          <div class="container-fluid">
+
+      <div class="d-flex justify-content-between align-items-center mb-4">
+
+        <button class="btn btn-outline-success d-md-none"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#mobileSidebar">
+          <i class="bi bi-list"></i>
+        </button>
+
+        <h4 class="fw-bold mb-0">Dashboard Overview</h4>
+
+        <input type="text"
+               class="form-control w-25 d-none d-md-block"
+               placeholder="Search...">
+      </div>
+      <div class="row g-4 mb-4">
+
+        <div class="col-6 col-lg-3">
+          <div class="card p-3 shadow-sm">
+            <h6>Total Revenue</h6>
+            <h4 class="fw-bold">$24,582</h4>
+          </div>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <div class="card p-3 shadow-sm">
+            <h6>Total Orders</h6>
+            <h4 class="fw-bold">3,842</h4>
+          </div>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <div class="card p-3 shadow-sm">
+            <h6>Total Products</h6>
+            <h4 class="fw-bold">1,247</h4>
+          </div>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <div class="card p-3 shadow-sm">
+            <h6>Customers</h6>
+            <h4 class="fw-bold">8,234</h4>
+          </div>
+        </div>
+
+      </div>
+      <div class="row g-4">
+
+  <div class="col-lg-8">
+    <div class="card p-4 shadow-sm">
+      <h6>Sales Overview</h6>
+      <div style="height:300px;">
+        <canvas id="salesChart"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-4">
+    <div class="card p-4 shadow-sm">
+      <h6>Category Sales</h6>
+      <div style="height:300px;">
+        <canvas id="categoryChart"></canvas>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+
+    </main>
+
+  </div>
+</div>
+</div>
+<footer class="footer-section bg-dark text-light pt-5 pb-3">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-12 col-md-6 col-lg-3 text-center text-md-start">
+
+        <div class="mb-3">
+          <img src="finalgreenlogo.png" width="110" class="img-fluid">
+        </div>
+
+        <p class="small">
+          Stackly delivers fresh groceries and daily essentials to your
+          doorstep in minutes. Fast, reliable, and affordable.
+        </p>
+
+        <div class="d-flex gap-3 mt-3 justify-content-center justify-content-md-start">
+          <a href="error2.html" class="text-light fs-5">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a href="error2.html" class="text-light fs-5">
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a href="error2.html" class="text-light fs-5">
+            <i class="bi bi-twitter"></i>
+          </a>
+          <a href="error2.html" class="text-light fs-5">
+            <i class="bi bi-youtube"></i>
+          </a>
+        </div>
+
+      </div>
+      <div class="col-12 col-md-6 col-lg-3 text-center text-md-start">
+        <h6 class="fw-bold mb-3">Quick Links</h6>
+        <ul class="list-unstyled footer-links">
+          <li><a href="error2.html">Home</a></li>
+          <li><a href="error2.html">Categories</a></li>
+          <li><a href="error2.html">My Orders</a></li>
+          <li><a href="error2.html">Track Order</a></li>
+          <li><a href="error2.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3 text-center text-md-start">
+        <h6 class="fw-bold mb-3">Categories</h6>
+        <ul class="list-unstyled footer-links">
+          <li><a href="error2.html">Vegetables</a></li>
+          <li><a href="error2.html">Fruits</a></li>
+          <li><a href="error2.html">Dairy & Eggs</a></li>
+          <li><a href="error2.html">Snacks</a></li>
+          <li><a href="error2.html">Beverages</a></li>
+        </ul>
+      </div>
+
+    <div class="col-12 col-md-6 col-lg-3">
+  <h6 class="fw-bold mb-3 text-center text-md-start">Contact Us</h6>
+
+  <div class="contact-item">
+    <i class="bi bi-geo-alt"></i>
+    <span>Salem, Tamil Nadu</span>
+  </div>
+
+  <div class="contact-item">
+    <i class="bi bi-telephone"></i>
+    <span>+91 98765 43210</span>
+  </div>
+
+  <div class="contact-item">
+    <i class="bi bi-envelope"></i>
+    <span>info@stackly.com</span>
+  </div>
+</div>
+    </div>
+
+    <hr class="border-secondary mt-4">
+
+    <div class="text-center small">
+      &copy; 2026 Stackly. All Rights Reserved.
+    </div>
+
+  </div>
+</footer>
+
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 800 });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    const ctx = document.getElementById('salesChart');
+
+new Chart(ctx, {
+  type: 'line',
+  data: {
+    labels: ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'],
+    datasets: [{
+      label: 'Sales',
+      data: [4000, 4500, 4300, 4700, 4600, 4200, 4400],
+      borderColor: '#198754',
+      backgroundColor: 'rgba(25,135,84,0.2)',
+      fill: true,
+      tension: 0.4
+    }]
+  }
+});
+
+const ctx2 = document.getElementById('categoryChart');
+
+new Chart(ctx2, {
+  type: 'doughnut',
+  data: {
+    labels: ['Vegetables','Dairy','Snacks','Fruits'],
+    datasets: [{
+      data: [34000, 25500, 17000, 25600],
+      backgroundColor: [
+        '#198754',
+        '#20c997',
+        '#0d6efd',
+        '#ffc107'
+      ]
+    }]
+  }
+});
+</script>
+</body>
+</html>

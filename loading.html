@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>STACKLY - Delivery Loading</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+body{
+    height:100vh;
+    background:linear-gradient(135deg,#00b894,#019875);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+}
+.loading-box{
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    width:90%;
+    max-width:400px;
+    text-align:center;
+    box-shadow:0 15px 35px rgba(0,0,0,0.2);
+    position:relative;
+    overflow:hidden;
+}
+.bike{
+    font-size:60px;
+    color:#00b894;
+    position:absolute;
+    bottom:20px;
+    left:-80px;
+    animation:ride 3s linear infinite;
+}
+
+@keyframes ride{
+    0%{ left:-80px; }
+    100%{ left:110%; }
+}
+
+.dot{
+    animation:blink 1.5s infinite;
+}
+.dot:nth-child(2){ animation-delay:0.2s; }
+.dot:nth-child(3){ animation-delay:0.4s; }
+
+@keyframes blink{
+    0%,100%{ opacity:0; }
+    50%{ opacity:1; }
+}
+
+</style>
+</head>
+<body>
+
+<div class="loading-box" data-aos="zoom-in" data-aos-duration="1200">
+
+    <h2 class="fw-bold text-success">
+        <i class="bi bi-basket-fill"></i> STACKLY
+    </h2>
+
+    <p class="text-muted">Groceries Delivered in Minutes</p>
+
+    <h6 class="mt-3">
+        Preparing your order
+        <span class="dot">.</span>
+        <span class="dot">.</span>
+        <span class="dot">.</span>
+    </h6>
+    <i class="bi bi-bicycle bike"></i>
+
+</div>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+AOS.init();
+setTimeout(function(){
+    window.location.href="index.html"; 
+},8000);
+</script>
+
+</body>
+</html>
