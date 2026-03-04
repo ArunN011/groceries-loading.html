@@ -1,0 +1,444 @@
+
+body{
+overflow-x:hidden;
+padding-top:30px;
+}
+
+.navbar-brand img{
+height:55px;
+width:auto;
+transition:0.3s;
+}
+.navbar-brand img:hover{
+transform:scale(1.1);
+}
+.navbar-nav .nav-link{
+font-weight:600;
+color:#333;
+margin-right:12px;
+position:relative;
+transition:0.3s;
+}
+.navbar-nav .nav-link:hover{
+color:#00b894;
+}
+
+.navbar-nav .nav-link::after{
+content:'';
+position:absolute;
+left:0;
+bottom:-5px;
+width:0%;
+height:2px;
+background:#00b894;
+transition:0.3s;
+}
+.navbar-nav .nav-link:hover::after{
+width:100%;
+}
+.navbar .dropdown-toggle::after{
+background:none;
+border-top-color:#333;
+}
+
+.dropdown-menu{
+border-radius:10px;
+border:none;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+padding:10px 0;
+}
+.dropdown-item{
+padding:10px 18px;
+transition:0.3s;
+}
+
+.dropdown-item:hover{
+background:#00b894;
+color:white;
+}
+.navbar .bi-person-circle,
+.navbar .bi-cart3{
+font-size:22px;
+transition:0.3s;
+}
+
+.navbar .bi-person-circle:hover,
+.navbar .bi-cart3:hover{
+color:#00b894;
+transform:scale(1.2);
+}
+.cart-icon-wrapper{
+position:relative;
+display:inline-block;
+}
+.cart-badge{
+position:absolute;
+top:-6px;
+right:-8px;
+background:#dc3545;
+color:#fff;
+font-size:10px;
+width:18px;
+height:18px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+font-weight:600;
+}
+.navbar .badge{
+font-size:10px;
+padding:4px 6px;
+}
+.navbar-nav .dropdown-menu{
+margin-top:10px;
+}
+@media (max-width:991px){
+.navbar-nav .nav-link::after{
+display:none;
+}
+.navbar-brand img{
+height:45px;
+}
+}
+.slider-img{
+height:420px;
+object-fit:cover;
+border-radius:10px;
+}
+@media(max-width:768px){
+
+.slider-img{
+height:220px;
+}
+
+.carousel-control-prev,
+.carousel-control-next{
+display:none;
+}
+
+}
+.category-card{
+display:block;
+background:#fff;
+border-radius:12px;
+padding:30px 25px;  
+box-shadow:0 6px 18px rgba(0,0,0,0.1);
+transition:0.3s;
+text-decoration:none;
+color:#333;
+}
+
+.category-card img{
+height:100px;        
+width:auto;
+margin-bottom:15px;
+}
+
+.category-card p{
+font-size:18px;    
+font-weight:600;
+margin:0;
+}
+
+.category-card:hover{
+transform:translateY(-6px);
+box-shadow:0 12px 25px rgba(0,0,0,0.15);
+}
+.products{
+background:#f7f7f7;
+}
+
+.product-card{
+background:white;
+border-radius:12px;
+padding:12px;
+transition:0.3s;
+position:relative;
+}
+
+.product-card:hover{
+box-shadow:0 8px 20px rgba(0,0,0,0.1);
+transform:translateY(-5px);
+}
+
+.product-img{
+position:relative;
+text-align:center;
+}
+
+.product-img img{
+height:120px;
+object-fit:contain;
+}
+
+.add-btn{
+position:absolute;
+top:5px;
+right:5px;
+background:white;
+border:2px solid #0d6efd;
+color:#0d6efd;
+font-size:18px;
+width:32px;
+height:32px;
+border-radius:8px;
+cursor:pointer;
+}
+
+.delivery{
+font-size:12px;
+font-weight:600;
+color:#777;
+}
+
+.product-name{
+font-size:14px;
+font-weight:600;
+margin-top:5px;
+}
+
+.qty{
+font-size:13px;
+color:#666;
+margin:0;
+}
+
+.discount{
+color:#00b894;
+font-weight:600;
+font-size:13px;
+margin:3px 0;
+}
+
+.price-box{
+display:flex;
+gap:8px;
+align-items:center;
+}
+
+.new-price{
+font-weight:700;
+}
+
+.old-price{
+text-decoration:line-through;
+color:#999;
+font-size:13px;
+}
+.beauty-card{
+display:block;
+background:#eef3f7;
+border-radius:14px;
+padding:20px;
+transition:0.3s;
+text-decoration:none;
+color:#333;
+}
+
+.beauty-card img{
+height:90px;
+object-fit:contain;
+margin-bottom:10px;
+}
+
+.beauty-card p{
+font-weight:600;
+font-size:14px;
+margin:0;
+}
+
+.beauty-card:hover{
+transform:translateY(-5px);
+box-shadow:0 8px 20px rgba(0,0,0,0.1);
+}
+.process-section{
+background:#f9fafb;
+}
+
+.process-icon{
+width:80px;
+height:80px;
+margin:auto;
+border-radius:50%;
+background:#00b894;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:34px;
+color:white;
+margin-bottom:15px;
+transition:0.4s;
+}
+
+.process-step{
+opacity:0;
+transform:translateY(40px);
+transition:0.6s;
+}
+
+.process-step.active{
+opacity:1;
+transform:translateY(0);
+}
+
+.process-icon:hover{
+transform:scale(1.15) rotate(8deg);
+background:#019875;
+}
+.flash-sale{
+background:#fff8e6;
+}
+
+.timer{
+font-size:20px;
+font-weight:600;
+background:#ff6b00;
+color:white;
+padding:6px 15px;
+border-radius:6px;
+}
+
+.sale-card{
+background:white;
+padding:20px;
+border-radius:12px;
+text-align:center;
+box-shadow:0 6px 15px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.sale-card img{
+height:120px;
+object-fit:contain;
+margin-bottom:10px;
+}
+
+.sale-price{
+font-weight:700;
+color:#ff6b00;
+}
+
+.sale-price span{
+text-decoration:line-through;
+color:#888;
+margin-left:6px;
+}
+
+.sale-card:hover{
+transform:translateY(-6px);
+box-shadow:0 12px 20px rgba(0,0,0,0.15);
+}
+.review-section{
+background:#f8f9fa;
+}
+
+.review-card{
+background:white;
+padding:30px;
+border-radius:12px;
+box-shadow:0 6px 18px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.review-card:hover{
+transform:translateY(-8px);
+box-shadow:0 12px 25px rgba(0,0,0,0.15);
+}
+
+.review-img{
+width:80px;
+height:80px;
+border-radius:50%;
+object-fit:cover;
+margin-bottom:10px;
+}
+
+.stars{
+color:#ffc107;
+margin-bottom:10px;
+}
+
+.review-card p{
+font-size:14px;
+color:#666;
+}
+.newsletter-section{
+background:#00b894;
+color:white;
+}
+
+.newsletter-box{
+display:flex;
+justify-content:center;
+max-width:500px;
+margin:auto;
+gap:10px;
+}
+
+.newsletter-box input{
+flex:1;
+padding:12px;
+border:none;
+border-radius:6px;
+outline:none;
+}
+
+.subscribe-btn{
+background:#222;
+color:white;
+padding:12px 20px;
+border-radius:6px;
+text-decoration:none;
+transition:0.3s;
+}
+
+.subscribe-btn:hover{
+background:#000;
+transform:scale(1.05);
+}
+.footer-section{
+background:#111;
+color:#ddd;
+}
+
+.footer-logo{
+height:60px;
+}
+
+.footer-title{
+color:white;
+margin-bottom:15px;
+font-weight:600;
+}
+
+.footer-links{
+list-style:none;
+padding:0;
+}
+
+.footer-links li{
+margin-bottom:8px;
+}
+
+.footer-links a{
+color:#bbb;
+text-decoration:none;
+transition:0.3s;
+}
+
+.footer-links a:hover{
+color:#00b894;
+}
+
+.social-icons a{
+color:white;
+margin-right:12px;
+font-size:18px;
+transition:0.3s;
+}
+
+.social-icons a:hover{
+color:#00b894;
+}
+
