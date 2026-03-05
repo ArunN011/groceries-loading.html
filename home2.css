@@ -110,6 +110,8 @@ border-radius:10px;
 
 .slider-img{
 height:220px;
+object-fit:contain;  
+background:#f8f8f8; 
 }
 
 .carousel-control-prev,
@@ -441,4 +443,5 @@ transition:0.3s;
 .social-icons a:hover{
 color:#00b894;
 }
+
 
